@@ -22,16 +22,19 @@ class Layer_Dense:
 
 # ReLU activation
 class Activation_ReLU:
+    """Dado o array de input transforma todos número negativos em zero"""
 
     # Forward pass
     def forward(self, inputs):
         # Calculate output values from inputs
+        # Retorna o valor se maior que zero ou zero
         self.output = np.maximum(0, inputs)
 
 
 
 # Softmax activation
 class Activation_Softmax:
+    """Transforma os inputs em um array de probabilidades de 0 a 1"""
 
     # Forward pass
     def forward(self, inputs):
